@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const keep_alive = require('./keep_alive.js')
+const token = process.env['TOKEN']
+
+
 
 const prefix = 'n'
 
@@ -34,4 +37,4 @@ client.on('message', message => {
 
 });
 
-client.login('ODI4OTY4ODMxNDkzOTk2NTU3.YGxTYg.DUzf_l0J99wYrfr6t7aomBvDleM');
+client.login(token);
