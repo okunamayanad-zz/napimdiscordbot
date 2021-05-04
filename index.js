@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
+ require('discord-reply');
 const client = new Discord.Client();
 const keep_alive = require('./keep_alive.js')
-const token = process.env['TOKEN']
+const TOKEN = process.env['TOKEN']
 
 
 
@@ -20,21 +21,26 @@ client.on('message', message => {
 
 
 
+    let member = message.author 
 
-      message.channel.messages.fetch(`${args[0]}`).then(message => {
-        message.react('🇳');
-        message.react('🇦');
-        message.react('🇵');
-        message.react('ℹ️');  
-        message.react('🇲');
-      }).then(message => {
-        message.react('👍')
-      }).then(message => {
-        console.log(`sunucu: ` + message.guild.name + `   kişi: ` + message.author.tag + `        ilk arg ${args[0]}`); 
+    let avatar = member.displayAvatarURL({size: 1024}) 
+
+      message.channel.messages.fetch(`${args[0]}`).then(napimed => {
+        napimed.react('🇳');
+        napimed.react('🇦');
+        napimed.react('🇵');
+        napimed.react('ℹ️');  
+        napimed.react('🇲');
+            const napimd = new Discord.MessageEmbed() 
+	.setColor('RANDOM') 
+    .setTitle('HAHA NAPİMLENDİN') 
+    .setFooter(message.author.username + ' seni napimledi', avatar) 
+    napimed.lineReplyNoMention(napimd)
+    message.delete()
       });
 
 
 
 });
 
-client.login(token);
+client.login("ODI4OTY4ODMxNDkzOTk2NTU3.YGxTYg.DUzf_l0J99wYrfr6t7aomBvDleM");
