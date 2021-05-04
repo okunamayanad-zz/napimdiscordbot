@@ -33,7 +33,7 @@ client.on('message', message => {
         napimed.react('🇲');
             const napimd = new Discord.MessageEmbed() 
 	.setColor('RANDOM') 
-    .setTitle('HAHA NAPİMLENDİN') 
+    .setTitle(napimed.author.username + ' HAHA NAPİMLENDİN') 
     .setFooter(message.author.username + ' seni napimledi', avatar) 
     napimed.lineReplyNoMention(napimd)
     message.delete()
