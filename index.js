@@ -1,8 +1,13 @@
 const Discord = require("discord.js");
 require("discord-reply");
 const client = new Discord.Client();
-const keep_alive = require("./keep_alive.js");
 const fs = require("fs");
+const http = require("http");
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("napim");
+});
+server.listen(3000);
 
 fs.readdir("./eventler/", (err, files) => {
   if (err) return console.error(err);

@@ -17,6 +17,7 @@ module.exports = async (client, message) => {
     let avatar = member.displayAvatarURL({ size: 1024 });
     let veri = await db.get(`mesajayari.${message.guild.id}`);
     message.channel.messages.fetch(mesajID).then(napimed => {
+      if (!veri) message.react("👍");
       napimed.react("🇳");
       napimed.react("🇦");
       napimed.react("🇵");
