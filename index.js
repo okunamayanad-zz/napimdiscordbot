@@ -32,3 +32,4 @@ fs.readdir("./komutlar/", (err, files) => {
 });
 
 client.login(process.env["TOKEN"]);
+    
