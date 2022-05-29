@@ -1,0 +1,36 @@
+{
+  "name": "napim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "asynckit": "^0.4.0",
+    "combined-stream": "^1.0.8",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^12.5.3",
+    "delayed-stream": "^1.0.0",
+    "event-target-shim": "^5.0.1",
+    "mime-db": "^1.47.0",
+    "node-fetch": "^2.6.1",
+    "mime-types": "^2.1.30",
+    "prism-media": "^1.2.9",
+    "setimmediate": "^1.0.5",
+    "ws": "^7.4.4",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okunamayanad/napimdiscordbot.git"
+  },
+  "author": "okunamayanad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okunamayanad/napimdiscordbot/issues"
+  },
+  "homepage": "https://github.com/okunamayanad/napimdiscordbot#readme"
+}
