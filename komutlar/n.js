@@ -3,6 +3,7 @@ const db = new Database();
 const Discord = require("discord.js");
 
 exports.run = async (client, message, [mesajID]) => {
+    console.log('!n kullanıldı')
   let member = message.author;
 
   let avatar = member.displayAvatarURL({ size: 1024 });
@@ -16,22 +17,6 @@ exports.run = async (client, message, [mesajID]) => {
       napimed.react("🇵");
       napimed.react("ℹ️");
       napimed.react("🇲");
-      console.log(
-            "Sunucu adı: " +
-            message.guild.name +
-            "\nSunucu ID si: " +
-            message.guild.id +
-            "\nKanal adı: " +
-            message.channel.name +
-            "\nKanal ID si: " +
-            message.channel.id +
-            "\nKullanıcı: " +
-            message.author.tag +
-            "\nMağdur: " +
-            napimed.author.tag +
-            "\nMesaj: " +
-            napimed.content
-      );
       if (veri === true) {
         const napimd = new Discord.MessageEmbed()
           .setColor("RANDOM")

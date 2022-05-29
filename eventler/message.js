@@ -3,9 +3,10 @@ const db = new Database();
 const Discord = require("discord.js");
 
 module.exports = async (client, message) => {
+
   if (message.author.bot) return;
 
-  if (message.content.startsWith("n ")) {
+  if (message.content.toLowerCase().startsWith("n ")) {
     const args = message.content
       .slice(("n ").length)
       .trim()
@@ -19,29 +20,14 @@ module.exports = async (client, message) => {
     message.channel.messages
       .fetch(mesajID)
       .then(napimed => {
+          // if (napimed.author.id == "614523861429387439") return message.lineReplyNoMention("⛔ Sahibimi napimleyemezsin!")
+        console.log('n kullanıldı')
         if (!veri) message.react("👍");
         napimed.react("🇳");
         napimed.react("🇦");
         napimed.react("🇵");
         napimed.react("ℹ️");
         napimed.react("🇲");
-        console.log(
-            "Sunucu adı: " +
-            message.guild.name +
-            "\nSunucu ID si: " +
-            message.guild.id +
-            "\nKanal adı: " +
-            message.channel.name +
-            "\nKanal ID si: " +
-            message.channel.id +
-            "\nKullanıcı: " +
-            message.author.tag +
-            "\nMağdur: " +
-            napimed.author.tag +
-            "\nMesaj: " +
-            napimed.content
-        );
-
         if (veri === true) {
           const napimd = new Discord.MessageEmbed()
             .setColor("RANDOM")
